@@ -15,12 +15,16 @@
 <body>
 
   <section id="Web">
-    <nav class="one">
-      <a class="linkNav" href="#about">About Me</a>
-      <a class="linkNav" href="#experience">Experience</a>
-      <a class="linkNav" href="#skills">Skills</a>
-      <a class="linkNav" href="#contact">Contact</a>
-    </nav>
+<nav class="one">
+  <ul class="nav-list">
+    <li><a class="linkNav" href="#about">About</a></li>
+    <li><a class="linkNav" href="#experience">Experience</a></li>
+    <li><a class="linkNav" href="#skills">Skills</a></li>
+    <li><a class="linkNav" href="#education">Education</a></li>
+    <li><a class="linkNav" href="#highlights">Highlights</a></li>
+    <li><a class="linkNav" href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
     <!-- ===== Main Glass Container ===== -->
     <div class="container">
@@ -31,7 +35,7 @@
 
       </header>
   <!-- ===== Photos Section ===== -->
-      <section id="about">
+      <section id="about-photos">
 
   <div class="about-photos">
     <img src="Assets/miguel1.jpg" alt="Photo of me">
@@ -53,9 +57,14 @@
           design.
           <strong>My goal is to grow into a professional developer while creating work that is both useful and
             engaging.</strong>
+
+            <blockquote>
+  “Technology is best when it brings people together.”
+  <cite>– Matt Mullenweg</cite>
+</blockquote>
         </p>
       </section>
-
+<hr>
       <!-- ===== Experience Section ===== -->
       <section id="experience">
         <h2 class="section-title">Experience</h2>
@@ -85,7 +94,7 @@
           service abilities.
         </p>
       </section>
-
+<hr>
       <!-- ===== Skills Section ===== -->
       <section id="skills">
         <h2 class="section-title">Skills</h2>
@@ -103,13 +112,53 @@
 
         </ul>
       </section>
+<hr>
+ <!-- ===== Education Section ===== -->
 
-      <hr>
+<section id="education">
+  <h2 class="section-title">Education</h2>
+
+  <article>
+    <h3>Associate Degree in Medical Science</h3>
+    <p>Hudson County Community College — 2023</p>
+  </article>
+
+  <article>
+    <h3>Bachelor’s in Computer Science (In Progress)</h3>
+    <p>New Jersey City University — Expected 2027</p>
+  </article>
+</section>
+<hr>
+ <!-- ===== HighLights Section ===== -->
+
+<section id="highlights">
+  <h2 class="section-title">Highlights</h2>
+
+  <ul>
+    <li>Transitioned from healthcare to technology</li>
+    <li>Licensed Pharmacy Technician</li>
+    <li>Certified Phlebotomist</li>
+    <li>10+ years professional experience</li>
+    <li>Building creative AI video projects</li>
+  </ul>
+
+  <h3>My Learning Roadmap</h3>
+<ol>
+  <li>Master HTML & CSS</li>
+  <li>Advance in JavaScript</li>
+  <li>Learn React</li>
+  <li>Build Full-Stack Applications</li>
+</ol>
+</section>
+
+
+<hr>
 
       <!-- ===== Contact Section ===== -->
       <section id="contact" class="contact-box">
         <h3>Contact Info</h3>
         <p>Email: migueljesusb@hotmail.com | Cell: (973)-757-3521</p>
+
 
         <!-- Navigation links to Soical Media profiles -->
 
@@ -118,6 +167,21 @@
           <strong><a href="https://www.github.com/mjbwun">GitHub</a></strong>
         </nav>
       </section>
+  <!-- Form -->
+
+      <form>
+         <h3>Send me a Message</h3>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="4" required></textarea>
+
+  <button type="submit" class="btn-primary">Send Message</button>
+</form>
 
     </div>
 
