@@ -1,12 +1,27 @@
-/* ================================
-   1. GLOBAL PAGE SETTINGS
-================================ */
+/* ==========================================
+            CSS VARIABLES
+   These store reusable colors for the site.
+   Changing them here updates the whole design.
+========================================== */
+:root {
+    --bg: #050c2e;
+    --text: #ffffff;
+    --accent: #9ad6ff;
+    --card-bg: rgba(255, 255, 255, 0.08);
+}
 
+
+/* ==========================================
+   GLOBAL PAGE SETTINGS
+   Controls page layout, background, and fonts
+========================================== */
 body {
     margin: 0;
     min-height: 100vh;
-    color: white;
     font-family: Arial, Helvetica, sans-serif;
+
+    background-color: var(--bg);
+    color: var(--text);
 
     /* Background image */
     background-image: url("Assets/Stars.jpg.png");
@@ -14,17 +29,18 @@ body {
     background-position: center;
     background-attachment: fixed;
 
-    /* Center container */
+    /* Center main container */
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding: 55px;
 }
 
-/* ================================
-   2. MAIN GLASS CONTAINER
-================================ */
 
+/* ==========================================
+  MAIN CONTAINER (Glass Effect Card)
+   Creates a modern glass-style layout box
+========================================== */
 .container {
     max-width: 900px;
     margin: 90px auto;
@@ -43,64 +59,48 @@ body {
 
 /* Hover lift effect */
 .container:hover {
-    box-shadow: 0 12px 45px rgba(255,255,255,0.15),
-                0 8px 35px rgba(0,0,0,0.6);
+    box-shadow: 0 12px 45px rgba(255, 255, 255, 0.15),
+        0 8px 35px rgba(0, 0, 0, 0.6);
     transform: translateY(-6px);
 }
 
-/* ================================
-   3. TYPOGRAPHY
-================================ */
 
+/* ==========================================
+            TYPOGRAPHY
+   Controls text styling and alignment
+========================================== */
 h1 {
     font-size: 40px;
-    margin-bottom: 10px;
     letter-spacing: 4px;
-
-    background: linear-gradient(90deg, #ffffff, #9ad6ff);
+    margin-bottom: 10px;
+    /* Gradient text effect */
+    background: linear-gradient(90deg, #ffffff, var(--accent));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
 
-.section-header {
+.section-header,
+.section-title {
     text-align: center;
-    font-weight: 800;
-    /* opacity: 0; */
     margin-bottom: 25px;
 }
 
 .section-title {
-    text-align: center;
     font-weight: 300;
     opacity: 0.85;
-    margin-bottom: 25px;
 }
 
+
+/* Experience job layout */
 .job {
+    text-align: center;
     margin-bottom: 18px;
-       text-align: center;
-}
-
-.job h3 {
-       text-align: center;
-    margin: 0;
-    font-size: 18px;
-    font-weight: 600;
 }
 
 .job-info {
-       text-align: center;
-    margin: 2px 0 8px 0;
     font-size: 14px;
     opacity: 0.75;
-}
-
-.experience-summary {
-    
-    font-weight: 300;
-    opacity: 0.85;
-    margin-bottom: 25px;
 }
 
 p {
@@ -108,76 +108,65 @@ p {
     font-size: 15px;
 }
 
-.ExperienceTable 
-    {
-  display: flex;
-  justify-content: space-around; 
-}
 
-#skills ul
-    {
-  display: flex;
-  justify-content: space-around; 
-}
-
-/* ================================
-   4. SPECIAL ELEMENTS
-================================ */
-
-/* Highlighted sale tags */
-.highlight {
-    background-color: rgb(29, 175, 200);
-    padding: 3px;
-    color: black;
+/* ==========================================
+ SKILLS SECTION 
+ Uses Flexbox to center skill items evenly.
+   Removes default bullet styling and spacing.
+========================================== */
+#skills ul {
+    display: flex;
+    justify-content: center;   /* centers skills horizontally */
+    gap: 40px;                 /* space between each skill */
+    padding: 0;
+    list-style: none;          /* removes default bullet points */
 }
 
 
-
-/* ================================
-   5. CONTACT SECTION
-================================ */
-
-.contact-box {
+/* ==========================================
+    EDUCATION & HIGHLIGHTS CENTERING
+   Centers Education and Highlights content
+========================================== */
+#education,
+#highlights {
     text-align: center;
-    margin-top: 20px;
 }
 
-.contact-links a {
-    color: #9ad6ff;
-    text-decoration: none;
-    margin: 0 10px;
+#education article,
+#highlights ul,
+#highlights ol {
+    max-width: 600px;
+    margin: 0 auto;
+    list-style-position: inside;
+    padding: 0;
 }
 
-.contact-links a:hover {
-    text-decoration: underline;
-}
 
-/* ================================
-   6. TOP NAV BAR 
-================================ */
-
+/* ==========================================
+            NAVIGATION BAR
+   Fixed at top and uses Flexbox for layout
+========================================== */
 .one {
     background-color: rgb(3, 1, 87);
     width: 100vw;
     height: 40px;
+
     position: fixed;
     top: 0;
     left: 0;
-    font-family: 'Quicksand', sans-serif;
     z-index: 1000;
 
     display: flex;
-    justify-content: center;   
-    align-items: center;       
-    gap: 40px;                
+    justify-content: center;
+    align-items: center;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-section {
-    scroll-margin-top: 60px;
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
 }
 
 .linkNav {
@@ -186,24 +175,25 @@ section {
     font-weight: 500;
 }
 
-.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
+/* Smooth scrolling when clicking nav links */
+html {
+    scroll-behavior: smooth;
 }
 
-/* ================================
-   7. PHOTOS SECTION 
-================================ */
+section {
+    scroll-margin-top: 60px;
+}
 
+
+/* ==========================================
+                PHOTO STYLING
+   Using Flexbox to align images horizontally
+========================================== */
 .about-photos {
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin-top: 70px; 
-    margin-bottom: 20px;
+    margin: 70px 0 20px 0;
 }
 
 .about-photos img {
@@ -211,10 +201,105 @@ section {
     height: 170px;
     object-fit: cover;
     border-radius: 15px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
     transition: transform 0.25s ease;
 }
 
+/* Image hover zoom effect */
 .about-photos img:hover {
     transform: scale(1.08);
+}
+
+
+/* ==========================================
+            CONTACT SECTION 
+Centers contact information and controls width
+   so it aligns with the rest of the layout.
+========================================== */
+.contact-box {
+    text-align: center;   /* centers text */
+    max-width: 600px;     /* prevents content from stretching too wide */
+    margin: 0 auto;       /* centers the entire block */
+}
+
+.contact-links a {
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+                BUTTON STYLES
+   Reusable button classes with hover effect
+========================================== */
+.btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: black;
+}
+
+.btn-primary:hover {
+    opacity: 0.8;
+}
+
+
+/* ==========================================
+                FORM STYLING
+   Controls form layout and input appearance
+========================================== */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+/* Controls message box height */
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+
+/* ==========================================
+        RESPONSIVE DESIGN
+   Adjusts layout for smaller screens
+========================================== */
+@media (max-width: 900px) {
+    .about-photos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .container {
+        padding: 25px;
+    }
 }

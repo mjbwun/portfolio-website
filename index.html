@@ -1,49 +1,63 @@
+<!--Personal Portfolio Website
+  Built using semantic HTML5 and modern CSS (Flexbox, variables, media queries).-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- ===== Page Info / SEO ===== -->
+  <!-- ===== Page Info ===== -->
+
+  <!-- Basic page information for browser and search engines -->
   <meta charset="utf-8">
   <meta name="author" content="Miguel Jesus Brown Portfolio">
+  <!-- Short description of the website -->
   <meta name="description"
     content="Aspiring software developer with a healthcare background, learning programming, creating interactive projects, and building websites.">
-
+  <!-- Title shown in browser tab -->
   <title>Miguel Jesus Brown Portfolio</title>
+  <!-- Links external CSS file for styling -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Makes the page responsive on phones and smaller screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-
+  <!--Navigation Section-->
   <section id="Web">
-<nav class="one">
-  <ul class="nav-list">
-    <li><a class="linkNav" href="#about">About</a></li>
-    <li><a class="linkNav" href="#experience">Experience</a></li>
-    <li><a class="linkNav" href="#skills">Skills</a></li>
-    <li><a class="linkNav" href="#education">Education</a></li>
-    <li><a class="linkNav" href="#highlights">Highlights</a></li>
-    <li><a class="linkNav" href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <!-- Navigation bar at the top of the page -->
+    <!-- Uses internal links to jump to different sections -->
+    <nav class="one">
+      <ul class="nav-list">
+        <li><a class="linkNav" href="#about">About</a></li>
+        <li><a class="linkNav" href="#experience">Experience</a></li>
+        <li><a class="linkNav" href="#skills">Skills</a></li>
+        <li><a class="linkNav" href="#education">Education</a></li>
+        <li><a class="linkNav" href="#highlights">Highlights</a></li>
+        <li><a class="linkNav" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
     <!-- ===== Main Glass Container ===== -->
-    <div class="container">
+    <main class="container">
 
       <!-- ===== Header / Hero Section ===== -->
+      <!-- Header section introducing the website -->
       <header>
         <h1 class="section-header">Welcome to Miguel Jesus Brown Portfolio</h1>
 
       </header>
-  <!-- ===== Photos Section ===== -->
+      <!-- ===== Photos Section ===== -->
+      <!-- Section containing profile images -->
+      <!-- Flexbox is used in CSS to align these images -->
       <section id="about-photos">
 
-  <div class="about-photos">
-    <img src="Assets/miguel1.jpg" alt="Photo of me">
-    <img src="Assets/miguel2.jpg" alt="Photo of me">
-    <img src="Assets/miguel3.jpg" alt="Photo of me">
-  </div>
+        <div class="about-photos">
+          <img src="Assets/miguel1.jpg" alt="Photo of me">
+          <img src="Assets/miguel2.jpg" alt="Photo of me">
+          <img src="Assets/miguel3.jpg" alt="Photo of me">
+        </div>
 
-</section>
+      </section>
 
       <!-- ===== About Section ===== -->
       <section id="about">
@@ -57,15 +71,18 @@
           design.
           <strong>My goal is to grow into a professional developer while creating work that is both useful and
             engaging.</strong>
-
-            <blockquote>
-  “Technology is best when it brings people together.”
-  <cite>– Matt Mullenweg</cite>
-</blockquote>
         </p>
+
+        <!-- ===== Blockquote Section ===== -->
+        <!-- Inspirational quote using semantic blockquote element -->
+        <blockquote>
+          “There is no substitute for hard work”
+          <cite>– Thomas Edison</cite>
+        </blockquote>
       </section>
-<hr>
+      <hr>
       <!-- ===== Experience Section ===== -->
+      <!-- Work experience section using article elements for each job -->
       <section id="experience">
         <h2 class="section-title">Experience</h2>
 
@@ -94,8 +111,10 @@
           service abilities.
         </p>
       </section>
-<hr>
+      <hr>
       <!-- ===== Skills Section ===== -->
+      <!-- Skills section using unordered lists -->
+      <!-- Flexbox is applied in CSS to space the skill items evenly -->
       <section id="skills">
         <h2 class="section-title">Skills</h2>
 
@@ -103,7 +122,7 @@
           <li>HTML <mark class="highlight">5 Years Experience</mark></li>
           <li>CSS</li>
           <li>JavaScript</li>
-</ul>
+        </ul>
         <ul>
           <li>Customer Service</li>
           <li>Phlebotomy <mark class="highlight">3 Years Experience</mark></li>
@@ -112,49 +131,52 @@
 
         </ul>
       </section>
-<hr>
- <!-- ===== Education Section ===== -->
+      <hr>
+      <!-- ===== Education Section ===== -->
+      <!-- Education section listing degrees and schools attended -->
 
-<section id="education">
-  <h2 class="section-title">Education</h2>
+      <section id="education">
+        <h2 class="section-title">Education</h2>
 
-  <article>
-    <h3>Associate Degree in Medical Science</h3>
-    <p>Hudson County Community College — 2023</p>
-  </article>
+        <article>
+          <h3>Associate Degree in Medical Science</h3>
+          <p>Hudson County Community College — 2023</p>
+        </article>
 
-  <article>
-    <h3>Bachelor’s in Computer Science (In Progress)</h3>
-    <p>New Jersey City University — Expected 2027</p>
-  </article>
-</section>
-<hr>
- <!-- ===== HighLights Section ===== -->
+        <article>
+          <h3>Bachelor’s in Computer Science (In Progress)</h3>
+          <p>New Jersey City University — Expected 2027</p>
+        </article>
+      </section>
+      <hr>
+      <!-- ===== HighLights Section ===== -->
+      <!-- Highlights section with key achievements -->
+      <!-- Includes both unordered list and ordered list -->
+      <section id="highlights">
+        <h2 class="section-title">Highlights</h2>
 
-<section id="highlights">
-  <h2 class="section-title">Highlights</h2>
+        <ul>
+          <li>Transitioned from healthcare to technology</li>
+          <li>Licensed Pharmacy Technician</li>
+          <li>Certified Phlebotomist</li>
+          <li>10+ years professional experience</li>
+          <li>Building creative AI video projects</li>
+        </ul>
 
-  <ul>
-    <li>Transitioned from healthcare to technology</li>
-    <li>Licensed Pharmacy Technician</li>
-    <li>Certified Phlebotomist</li>
-    <li>10+ years professional experience</li>
-    <li>Building creative AI video projects</li>
-  </ul>
-
-  <h3>My Learning Roadmap</h3>
-<ol>
-  <li>Master HTML & CSS</li>
-  <li>Advance in JavaScript</li>
-  <li>Learn React</li>
-  <li>Build Full-Stack Applications</li>
-</ol>
-</section>
+        <h3>My Learning Roadmap</h3>
+        <ol>
+          <li>Master HTML & CSS</li>
+          <li>Advance in JavaScript</li>
+          <li>Learn how to animate cartoons</li>
+          <li>Build Full-Stack Applications</li>
+        </ol>
+      </section>
 
 
-<hr>
+      <hr>
 
       <!-- ===== Contact Section ===== -->
+      <!-- Contact section including social links and contact form -->
       <section id="contact" class="contact-box">
         <h3>Contact Info</h3>
         <p>Email: migueljesusb@hotmail.com | Cell: (973)-757-3521</p>
@@ -166,25 +188,33 @@
           <strong><a href="https://www.linkedin.com/in/migueljesusbrown/">LinkedIn</a></strong> |
           <strong><a href="https://www.github.com/mjbwun">GitHub</a></strong>
         </nav>
+
+
+
+        <!-- Form Section -->
+        <!-- Contact form with labels for accessibility -->
+        <!-- Required fields ensure user must enter information -->
+        <form>
+          <h3>Send me a Message</h3>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
       </section>
-  <!-- Form -->
+    </main>
 
-      <form>
-         <h3>Send me a Message</h3>
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required>
-
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
-
-  <label for="message">Message:</label>
-  <textarea id="message" name="message" rows="4" required></textarea>
-
-  <button type="submit" class="btn-primary">Send Message</button>
-</form>
-
-    </div>
-
+    <!--Footer-->
+    <!-- Footer section displayed at the bottom of the page -->
+    <footer>
+      <p>© 2026 Miguel Jesus Brown. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
