@@ -122,6 +122,10 @@ p {
     list-style: none;          /* removes default bullet points */
 }
 
+.highlight {
+    background-color: rgb(95, 246, 246);
+}
+
 
 /* ==========================================
     EDUCATION & HIGHLIGHTS CENTERING
